@@ -35,8 +35,13 @@ h1, h2 {
 h1{
 	color:#ffffff;
 	background: #4aaaa5;
-	font-size: 2em;
-}
+	display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;}
 h1 a{
 	text-decoration: none;
 	color:#ffffff;
@@ -46,6 +51,12 @@ h2{
 	color: #4aaaa5;
 	padding-left: 20px;
 	font-size:1.5em;
+	display: block;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
 }
 header h1 {
 	width: 20%;
