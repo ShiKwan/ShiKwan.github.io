@@ -123,3 +123,19 @@ a{
 .txt1:hover:disabled {
 	background: red;
 }
+
+@media only screen and (max-width: 768px) {
+ #main-content{
+ 	padding:50px 100px 50px 100px;
+ 	margin:100px 0 100px 0;
+ 	background: black;
+ 	color:white;
+ }
+
+ #sidebar {
+ 	padding:100px 200px 100px 200px;
+ 	margin:100px 0 100px 0;
+ 	background: navy;
+ 	color:gold;
+ }
+}
