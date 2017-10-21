@@ -89,9 +89,8 @@ nav a:hover{
 .container {
 	text-align: left;
 	float:left;
-	width:1600px;
-	padding:0 20% 0 20%;
-	height: 1200px;
+	padding:0 15% 0 15%;
+	height: auto;
 	background-image: url(../images/round.png);
 	background-repeat: repeat;
 	border-top: solid #cccccc;
