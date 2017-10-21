@@ -3,7 +3,9 @@ p {
 	font-size:16px;
 	line-height: 1.5;
 	letter-spacing: 1.5px;
+	text-indent: 50px;
 }
+
 body {
 	padding: 0 20% 0 20%;
 }
@@ -17,4 +19,107 @@ body {
 
 .ul1 li:first-child {
 	color:blue;
+}
+
+.section1 {
+	font-weight:400;
+	font-family:  Acme, cursive;
+}
+
+.section2 {
+	font-size: 24px;
+	font-family: Poppins, cursive;
+}
+
+.section3 {
+	line-height: 50px;
+}
+
+.section1:first-letter{
+	font-size:50px !important;
+}
+
+.content:first-child:first-letter {
+	font-size:50px;
+}
+
+.cmdBtn {
+	background: lightblue;
+	padding: 10px 20px 10px 20px;
+	font-size:50px;
+	color: white;
+	border: none;
+}
+
+.cmdBtn:active {
+	background: orange;
+}
+.cmdBtn:focus {
+	background: black;
+}
+.cmdBtn:hover {
+	background:navy;
+}
+.cmdBtn:visited {
+	background:green;
+}
+a{
+	font-size: 50px;
+}
+
+.a1 {
+	color: #4AAAA5;
+}
+
+.a1:active {
+	color: #BBFFFB;
+}
+
+.a1:focus{
+	color: #6FFFF7;
+}
+
+.a1:hover{
+	color: #5E7F7E;
+}
+
+.a2 {
+	background:#3CB2AC;
+}
+
+.a2:active {
+	background:#FF88EA;
+}
+
+.a2:focus{
+	background:#6FFFF7;
+}
+
+.a2:hover{
+	background:#CCB444;
+}
+
+
+.a3 {
+	color: #6FFFF7;
+}
+
+.a3:active {
+	color: #808D99;
+}
+
+.a3:focus{
+	color: #448BCC;
+}
+
+.a3:hover{
+	color: #FFBFAF;
+}
+
+.txt1 {
+	font-size: 30px;
+}
+
+.txt1:hover:disabled {
+	background: red;
 }
