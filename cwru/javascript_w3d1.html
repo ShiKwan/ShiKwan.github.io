@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Pizza Variables - Unsolved</title>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="fanpage-style.css"> -->
+	<link rel="icon" type="image/jpg" href="http://www.dalessandroegalli.com/images/events/thumbs/236.jpg?t=1452720982">
+
+</head>
+<body>
+	 <!-- Note the script tag here as well as the "text/javascript" -->
+    <!-- When we write JavaScript in HTML, it must be contained within a <script> tag. -->
+     <script type="text/javascript">
+
+    // Instructions:
+    // Create 3 variables. One called: "name", one called "pizzaCount", and one called "isHungry".
+    // The name variable should be set to your name.
+    // The pizzaCount variable should be set to a number.
+    // The isHungry variable should be set to true or false.
+
+    // FILL IN YOUR CODE HERE
+    // =============================================
+    var name = "SK";
+    var pizzaCount = 2;
+    var isHungry = false;
+    // ==============================================
+
+
+    // Don't touch this code :-)
+    var totalCost = pizzaCount * 5.00;
+
+    // alert("Welcome: " + name);
+    console.log("Welcome: " + name);
+
+
+    // alert("Pizzas cost $5 each");
+    console.log("Pizzas cost $5 each");
+
+    // alert("Your total is: $" + totalCost);
+    console.log("Your total is: $"+ totalCost);
+    if (!isHungry){
+    	// alert("Still hungry : NO");
+    	console.log("Still hungry : NO");
+    }else{
+    	// alert("Still hungry : YEAH");
+    	console.log("Still hungry : YEAH");
+    }
+
+   /* var likeDog = confirm("Do you like dog?");
+    var txtDog = prompt("What kind of dog?");
+    if(likeDog){
+    	alert("You are a dog person!");
+    }else {
+    	alert("..., how?");
+    }
+    if(txtDog !== ""){
+    	alert("You like " + txtDog + ". Nice!");
+    }
+*/
+
+	var boolSteak = confirm("Do you like steak?");
+	var age = prompt("What is your birth year?");
+	if(boolSteak){
+		document.write("Here's your steak!");	
+	}else{
+		document.write("Here's a Tofu Stir-Fry!");
+	}
+	if(age < 21){
+		document.write("<br/>No sake for you!");
+	}
+
+	
+      // Fill in the question marks with what the output will be.
+      var animals = ["parrot", "cat", "dog"];
+
+      // 3
+      console.log(animals.length);
+
+      // cat
+      console.log(animals[1]);
+
+      // dog
+      console.log(animals[2]);
+
+      // parrot
+      console.log(animals[0]);
+
+      // undefine
+      console.log(animals[animals.length]);
+
+      // dog
+      console.log(animals[animals.length - 1]);
+
+      // -1
+      console.log(animals.indexOf("bear"));
+
+      // 0
+      console.log(animals.indexOf("parrot"));
+
+
+
+
+    </script>
+	<!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
