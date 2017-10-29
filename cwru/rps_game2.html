@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Rock Paper and Scissors</title>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="fanpage-style.css"> -->
+	<link rel="icon" type="image/jpg" href="http://www.dalessandroegalli.com/images/events/thumbs/236.jpg?t=1452720982">
+
+</head>
+<body>
+	<div id="game">
+
+  </div>
+
+  <script type="text/javascript">
+
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var computerChoices = ["r", "p", "s"];
+    var wins = 0; 
+    var loses = 0;
+    var ties = 0;
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+
+      // Determines which key was pressed.
+      var userGuess = event.key;
+
+      // Randomly chooses a choice from the options array. This is the Computer's guess.
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+      // Alerts the key the user pressed (userGuess).
+      //alert("User guess: " + userGuess);
+
+      // Alerts the Computer's guess.
+      //alert("Computer guess: " + computerGuess);
+
+      if((userGuess == "r" && computerGuess =="r") || (userGuess =="p" && computerGuess=="p") || (userGuess == "s" && computerGuess =="s")){
+		ties++;
+		alert(`user guess ${replacing(userGuess)} and computer guess ${replacing(computerGuess)}`);
+		alert(`Ties! \n Scoreboard: win = ${wins}   loses = ${loses}   ties = ${ties})`);
+      }
+      else if((userGuess =="r" && computerGuess =="s") || (userGuess =="p" && computerGuess=="r") || (userGuess == "s" && computerGuess =="p")){
+		wins++;
+		alert(`user guess ${replacing(userGuess)} and computer guess ${replacing(computerGuess)}`);
+		alert(`You win!! \n Scoreboard: win = ${wins}   loses = ${loses}   ties = ${ties})`);
+      }
+      else if((userGuess =="r" && computerGuess =="p") || (userGuess =="p" && computerGuess=="s")|| (userGuess == "s" && computerGuess =="r")){
+      	loses++;
+      	alert(`user guess ${replacing(userGuess)} and computer guess ${replacing(computerGuess)}`);
+      	alert(`You lose =( \n Scoreboard: win = ${wins}   loses = ${loses}   ties = ${ties})`);
+      }
+    };
+
+
+    function replacing(toReplace){
+    	if(toReplace == "r"){
+    		return "Rock";
+    	}else if(toReplace =="p"){
+    		return "Paper";
+    	}else if(toReplace =="s"){
+    		return "Scissors";
+    	}
+    };
+  </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

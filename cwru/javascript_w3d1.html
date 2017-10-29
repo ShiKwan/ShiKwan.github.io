@@ -63,16 +63,74 @@
     }
 */
 
-	var boolSteak = confirm("Do you like steak?");
-	var age = prompt("What is your birth year?");
-	if(boolSteak){
-		document.write("Here's your steak!");	
+
+// create an array of name of each hand
+var rps = ["rock","paper","scissors"];
+
+// prompt user to enter value of 1, 2, or 3.
+var userInput = prompt("Your choose: rock(1), paper(2), or scissors(3)?");
+
+// randomize an output from computer. 
+var computerInput = Math.floor((Math.random() * 10%3));
+
+
+
+
+//if user select rock
+if(userInput == 1){
+	alert(`you pick ${rps[userInput -1]} (${userInput})`);
+	alert(`computer pick ${rps[computerInput]} (${computerInput}`);
+
+	//pc select rock
+	if(computerInput == 1) {
+		alert("draw");
+		//pc select paper
+	}else if(computerInput == 2) {
+		alert("you lose =(");
+		//pc select scissors
 	}else{
-		document.write("Here's a Tofu Stir-Fry!");
+		alert("you win!");
 	}
-	if(age < 21){
-		document.write("<br/>No sake for you!");
+	//if user select paper
+}else if(userInput == 2){
+	alert(`you pick ${rps[userInput -1]} (${userInput})`);
+	alert(`computer pick ${rps[computerInput]} (${computerInput}`);
+
+	//computer select rock
+	if(computerInput == 1){
+		alert("you win!");
+	//computer select paper
+	}else if(computerInput == 2){
+		alert("draw");
+		//pc select scissors
+	}else{
+		alert("you lose =(")
 	}
+	//if user select scissors
+}else if(userInput == 3){
+	alert(`you pick ${rps[userInput -1]} (${userInput})`);
+	alert(`computer pick ${rps[computerInput]} (${computerInput}`);
+
+	//computer select rock
+	if(computerInput ==1){
+		alert("you lose =(");
+	}else if(computerInput ==2){
+		alert("you win!");
+		//pc select scissors
+	}else {
+		alert("draw");
+	}
+}else {
+	alert("you pick invalid input!");
+	alert(`computer pick ${rps[computerInput]} (${computerInput}`);
+}
+
+
+
+for(var i = 0; i < 5; i++){
+	console.log(Math.floor((Math.random() * 10/3) + 1));
+}
+
 
 	
       // Fill in the question marks with what the output will be.

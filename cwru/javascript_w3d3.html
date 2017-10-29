@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Template 1 </title>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="fanpage-style.css"> -->
+	<link rel="icon" type="image/jpg" href="http://www.dalessandroegalli.com/images/events/thumbs/236.jpg?t=1452720982">
+
+</head>
+<body>
+	<script type="text/JavaScript">
+		
+
+
+// ????
+      // var favTVshows = [];
+      // var tvShow;
+
+      // // For Loop Elements Repeats 3 Times
+      // for (var i = 1; i < 4; i++) {
+
+      //   // prompt user to enter number 1, 2, and 3 favorite TV show 
+      //   tvShow = prompt("What's your #" + i + " favorite TV show?");
+
+      //   // after each prompt, push the tvShow to array. 
+      //   favTVshows.push(tvShow);
+      // }
+
+      // // loop the amount of time of number of items in favTVshows array
+      // for (var j = 0; j < favTVshows.length; j++) {
+
+      //   // pop up message showing favorite tv show 1,2 and 3. 
+      //   alert(favTVshows[j]);
+      // }
+
+      // function logArray(arr){
+      // 	for(var i = 0; i< arr.length; i++){
+      // 		console.log(arr[i]);
+      // 	}
+      // 	console.log("----------");
+      // }
+
+
+      // FUNCTIONS
+      // ================================================================================
+
+      // Create a Function called "adder" that take three arguments (x, y, z).
+      // The function should add the arguments together, and log the result to the console.
+      function adder(x, y, z){
+      	console.log(x+y+z);
+      	return(x+y+z);
+      }
+
+      function adderReturn(x, y, z){
+      	return(x+y+z);
+      }
+
+      // Create a Function called "multiplier" that takes three arguments (x, y, z).
+      // The function should multiply the arguments, and log the result to the console.
+      function multiplier(x, y, z){
+      	console.log(x*y*z);
+      }
+
+      function multiplierReturn(x, y, z){
+      	return(x*y*z);
+      }
+
+
+      // Create a Function called "isString" that takes three arguments (x, y, z).
+      // "isString" determines if all three arguments are strings and logs an appropriate response to the console.
+      function isString(x, y, z){
+      	if(typeof(x)=="string" && typeof(y)=="string" && typeof(z)=="string"){
+      		console.log(` ${x}, ${y}, and ${z} are all strings!`);
+      	}else {
+      		console.log("one of the value is not string. ");
+      	}
+      }
+
+
+      // Create a Function called "vowelChecker" that takes in a single argument (x).
+      // "vowlChecker" logs whether or not the input is a vowel.
+      function vowelChecker(x){
+      	var vowelCheck = false;
+      	for(var i = 0; i <= x.length; i++){
+      		if(vowelCheck == false){
+
+				if(x[i] == "a" || x[i] == "e" || x[i] == "i" || x[i] == "o" || x[i] == "u" ){
+					vowelCheck = true;
+					console.log(`character ${i} contains a vowel in ${x}!`);
+				}
+      		}
+		}
+		if(vowelCheck == false) {
+				console.log(`no vowel found in ${x}`);
+		}
+      }
+
+
+      // BONUS
+      // Creates a version of "adder" that returns its result. Function is called "adderReturn".
+
+
+      // Creates a version of "multiplier" that returns its result. Function is called "multiplierReturn".
+
+
+      // FUNCTION EXECUTION
+      // ================================================================================
+
+      // Add in the lines of code below necessary to call the functions we created above.
+
+
+      // Call the adder function here.
+      // adder(1,2,3);
+      
+
+      console.log("-------------------");
+
+
+      // Call the multiplier function here.
+      // multiplier(1, 2, 5);
+      
+
+
+      console.log("-------------------");
+
+
+      // Call the isString function here.
+      // isString("abc", "bde", 111);
+      // isString("abc", "bde", "abb");
+
+
+      console.log("-------------------");
+
+
+      // Call the vowelChecker function here.
+      // vowelChecker("sssss");
+      // vowelChecker("aeiou");
+      // vowelChecker("bac");
+
+
+      console.log("-------------------");
+
+
+      // BONUS
+      // Call the adderReturn function here and set it equal to a variable. Then log that variable to the console.
+
+	  // var x = adderReturn(1,2,3);
+      // console.log("adderReturn = " + x );
+
+
+
+      console.log("-------------------");
+
+
+
+   //    // Call the multiplierReturn function here and set it equal to a variable. Then log that variable to the console.
+	  // var y = multiplierReturn(1,2,10);
+   //    // console.log("multiplier2 = " + y);
+
+
+
+
+
+
+
+
+ var car = {
+        make: "Honda",
+        model: "Fit",
+        color: "Blue Raspberry",
+        mileage: 3000,
+        achievement: 0,
+        isWorking: true,
+
+        driveToWork: function() {
+
+          alert("Old Mileage: " + this.mileage)
+
+          this.mileage = this.mileage + 8;
+
+          alert("New mileage: " + this.mileage);
+
+          this.reWriteStats();
+        },
+
+        driveAroundWorld: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 24000;
+
+          alert("New Mileage: " + this.mileage);
+          alert("Car needs a tuneup!");
+
+          this.isWorking = false;
+          this.reWriteStats();
+        },
+
+        getTuneUp: function() {
+          alert("Car is ready to go!");
+          this.isWorking = true;
+          this.reWriteStats();
+        },
+
+        honk: function() {
+          alert("Honk! Honk!");
+          this.reWriteStats();
+        },
+        runOverCat: function() {
+        	console.log("Vrooom, meoww!!");
+        	this.achievement ++;
+        },
+        reWriteStats: function() {
+        	console.log(`Make : ${this.make} ,Model: ${this.model},Color: ${this.color}, Mileage: ${this.mileage},is Working:  ${this.isWorking}`);
+        }
+      };
+
+
+      car.runOverObject = 1;
+      //console.log(car.runOverObject);
+
+      // car.upgrade = new Array();
+      // car.upgrade.push("nitro boost");
+      // car.upgrade.push("new exhaust");
+      // car.upgrade.push("wings");
+
+       document.onkeyup = function(event) {
+
+      // Determines which key was pressed.
+      var userInput = event.key;
+      // alert(userInput);
+      if(userInput == "h" ){
+      	car.honk();
+      }else if(userInput == "d"){
+      	car.driveToWork();
+      }else if(userInput == "w"){
+      	car.driveAroundWorld();
+      }else if(userInput =="t"){
+      	car.getTuneUp();
+      }
+  }
+
+
+
+      // for(var i= 0; i < car.upgrade.length; i++){
+
+      // console.log(car.upgrade[i]);
+      // }
+
+      // car.runOverCat();
+
+      // console.log(car.achievement);
+
+	</script>
+
+<h1>Car game</h1>
+<p> Type "h" to honk, "d" to drive to work, "w" to drive around the world, or "t" to get a tuneup. </p>
+
+<h1>See console for car stats</h2>
+
+
+
+
+	<!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
