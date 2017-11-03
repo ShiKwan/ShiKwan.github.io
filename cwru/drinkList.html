@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Content!</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <h1>Drink Selection!</h1>
+  <hr>
+  <div id="drink-options"></div>
+
+<h1>Drink Selection rolling with .each JQuery style. </h1>
+  <div id="drink-options-for-each"></div>
+  <script type="text/javascript">
+    var drinkList = [
+      "Coffee: $5",
+      "Espresso: $7",
+      "Cappuccino: $6",
+      "Latte: $4",
+      "Tea: $3",
+      "Ice Coffee: $6",
+      "Ice Espresso: $8",
+      "Ice Latte: $6",
+      "Ice Tea: $4"
+    ];
+
+
+    var drinkDiv = $("#drink-options");
+
+
+    for(var i = 0; i< drinkList.length; i++){
+      drinkDiv.append("<div>" + drinkList[i] + "</div>");
+    }
+
+    var drinkDiv2 = $("#drink-options-for-each");
+    $(drinkList).each(function(){
+      drinkDiv2.addClass("red blue");
+      drinkDiv2.removeClass("red");
+      
+      drinkDiv2.append("<div>" + this + "</div>");
+    })
+    // Using JavaScript programmatically append each drinkList item to the "drink-options" div
+    // HINT: you will need a for loop to go over each element in the list
+  </script>
+</body>
+</html>
+
+

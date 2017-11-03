@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Template 1 </title>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="fanpage-style.css"> -->
+	<link rel="icon" type="image/jpg" href="http://www.dalessandroegalli.com/images/events/thumbs/236.jpg?t=1452720982">
+<!-- jQuery, javascript file for the Bootstrap's javascript file to function -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="empty-div"></div>
+	<div id="empty-div2"></div>
+
+
+
+
+
+	<h1>Drink Selection!</h1>
+  <hr>
+  <!-- Here we create a generic drink-options div -->
+  <div id="drink-options"></div>
+
+
+
+
+	
+	<script type="text/JavaScript">
+		var targetDiv = document.getElementById("empty-div");
+		targetDiv.innerHTML = '<span class="my-class"> Hello </span> friends!';
+		targetDiv.innerHTML += ' what? ';
+
+		var newDiv = document.createElement("div");
+		var newDivjquery = $("<div>"); //same thing as line above
+
+
+		newDiv.innerHTML = "A pleasure to meet you!";
+
+		targetDiv.appendChild(newDiv);
+
+// Array holds all of the drinks available
+    var drinkList = [
+      "Coffee: $5",
+      "Espresso: $7",
+      "Cappuccino: $6",
+      "Latte: $4",
+      "Tea: $3",
+      "Ice Coffee: $6",
+      "Ice Espresso: $8",
+      "Ice Latte: $6",
+      "Ice Tea: $4"
+    ];
+    var newDivjQuery = $("#drink-options");
+
+    for (var i = 0; i < drinkList.length; i++)
+    {
+    	var jQueryNewDiv = $("div");
+    	jQueryNewDiv.text(drinkList[i]);
+    	newDivjQuery.append(jQueryNewDiv);
+    }
+
+
+    // // 1. Create code that "grabs" the div with the matching id (#drink-options);
+    // var drinkOption = document.getElementById("drink-options");
+    // var drinkDiv = document.getElementById("drink-options");
+
+    // // 2. Create a for loop that creates HTML content of all the drinks using JavaScript.
+    // // HINT: You will need to use each of the following methods: createElement, innerHTML, appendChild
+   
+    
+    // // ...
+    // for(var i = 0; i < drinkList.length; i++){ 
+    // 	var newDrinkDiv = document.createElement("div");
+    // 	newDrinkDiv.innerHTML = drinkList[i];
+    //   // We then add the placeholder div to the our main div on the page ("#drink-options")
+   	//    drinkDiv.appendChild(newDrinkDiv);
+    // 	//drinkOption.innerHTML += drinkList[i] + " <br /> "
+    // }
+
+    // //NOTES: REMEMBER TO ADD .INNERHTML
+
+
+    // newDiv.attr({
+    // 	'class': 'class1 class3'
+    // });
+
+    //   // Thanks to jQuery's handy $ selector ... we have a wealth of new methods for selecting and manipulating HTML.
+    // // Here we are using jQuery's .HTML method to instantly select and change the contents of our empty-div.
+    // $("#empty-div2").html("<h1>Hello friends!</h1>");
+    // // We can just as easily append a new line using a similarly simple .append method.
+    // $("#empty-div2").append("A pleasure to meet you!");
+
+
+
+	</script>
+	
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
