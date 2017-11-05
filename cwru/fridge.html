@@ -65,6 +65,21 @@
       // Here we are provided an initial array of letters.
       // Use this array to dynamically create buttons on the screen.
       var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_"];
+      var image = $("<img>");
+      image.attr("src", "images/fire.gif");
+      image.attr("class", "letter letter-button-color");
+      image.attr("style", "width:50px height:50px");
+      image.attr("data-letter", image.attr('src'));
+
+
+      // create a image magnet. 
+      image.click(function() {
+        var fridgeMagnet = $("<img />");
+        fridgeMagnet.attr("class", "letter fridge-color");
+        fridgeMagnet.attr('src', $(this).attr('src'));
+        $("#display").append(fridgeMagnet);
+      })
+
 
 
       // MAJOR TASK #1: DYNAMICALLY CREATE BUTTONS
@@ -80,6 +95,7 @@
         console.log(letterBtn.html());
         console.log(letterBtn.attr("class"));
       }
+      $("#buttons").append(image);
 
       // Inside the loop...
 
@@ -104,6 +120,8 @@
         fridgeMagnet.text($(this).attr("data-letter"));
         $("#display").append(fridgeMagnet);
       });
+
+
 
 
       // 7. Create an "on-click" event attached to the ".letter-button" class.
