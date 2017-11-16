@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Rock Paper and Scissors</title>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="fanpage-style.css"> -->
+	<link rel="icon" type="image/jpg" href="http://www.dalessandroegalli.com/images/events/thumbs/236.jpg?t=1452720982">
+
+</head>
+<body>
+	<div id="fizz">fizz: 
+	</div>
+	<div id="buzz">buzz:
+	</div>
+	<div id="fizzbuzz">fizz buzz: </div>
+	<div id="prime"></div>
+	<div id="prime2"></div>
+	<div id="prime3"></div>
+	<div id="prime4"></div>
+
+  </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+$(document).ready(function(){
+/*  	for(var i = 1; i <= 100; i ++){
+
+  		console.log("current number is " + i);
+  		if(i%3 == 0 && i%5 == 0){
+  			console.log("fizz buzz");
+  			$("#fizzbuzz").append(" " + i  );
+
+  		}else 
+  		if(i%3 == 0 && i%5 != 0){
+  			console.log("fizz");
+  			$("#fizz").append(" " + i  );
+  		}else if(i%5 == 0 && i%3!= 0){
+  			console.log("buzz");
+  			$("#buzz").append(" " + i  );
+  		}
+  	}
+  });
+
+
+function primeChecker(value){
+	var checker = true;
+	for (var i = 2; i< value; i++){
+		if(value %i == 0 ){
+			checker = false;
+		}
+	}
+	if(value === 1){
+		return false;
+	}else{
+		return checker;
+	}
+}
+
+
+
+
+$("#prime").text(primeChecker(11));
+$("#prime2").text(primeChecker(1));
+$("#prime3").text(primeChecker(4));
+$("#prime4").text(primeChecker(7));
+*/
+
+var files = ["pavans_first_birthday.mov", 
+"owens_asleep_at_the_computer.jpg",
+"michael_fights_a_polar_bear.mp4", 
+"nate_road_rage.avi",
+"ruby_skydiving.jpeg", 
+"ken_getting_his_black_belt.png", 
+"dan_winning_underground_street_race.mov", 
+"its_hard_to_come_up_with_file_names.gif", 
+"seriously_this_is_taking_too_long.mpg", 
+"i_wonder_how_many_of_these_i_should_have.png", 
+"probably_a_few_more.avi", 
+"nutmeg_is_clawing_my_sneakers_again.mp4", 
+"cat_i_will_destroy_you.gif", 
+"i_wish_we_had_a_dog.jpeg", 
+"stop_looking_at_me_like_that_nutmeg.mpeg", 
+"aww_i_cant_hate_you.png", 
+"omg_my_sneakers.avi", 
+"cat_you_are_the_worst.mp4" 
+];
+
+/*### Image File Extensions
+
+* jpg
+* gif
+* jpeg
+* png
+
+  ### Video File Extensions
+
+* mov
+* avi
+* mpeg
+* mp4
+* mpg
+
+*/
+var imageExtensions = [ 'jpg', 'gif', 'jpeg', 'png'];
+var videoExtensions = [ 'mov', 'avi', 'mpeg', 'mp4', 'mpg'];
+var images = [];
+var videos = [];
+
+console.log("here");
+for(var i = 0; i < files.length; i++)
+{
+	console.log("here");
+	var itemToSplit = [];
+	var fileType;
+	itemToSplit = files[i].split(".");
+	fileType = itemToSplit[itemToSplit.length-1];
+
+	console.log(fileType);
+
+	if(fileType.indexOf("jpg") >= 0 || fileType.indexOf("gif") >= 0 || fileType.indexOf("png")>= 0 || fileType.indexOf("jpeg")>= 0){
+		images.push(files[i]);
+
+	}else if(fileType.indexOf("mov")>= 0 || fileType.indexOf("avi") >= 0|| fileType.indexOf("mpeg") || fileType.indexOf("mpg")>= 0 || fileType.indexOf("mp4")>= 0){
+		videos.push(files[i]);
+	}
+}
+	console.log("number of images : " + images.length);
+	console.log("number of videos : " + videos.length);
+	console.log("images : "  +  images);
+	console.log("videos : " + videos);
+});
+
+
+
+function extensionSort(fileArray){
+	for(var i = 0 ; i < fileArray.length; i ++){
+		var fileExt = fileArray[i].split('.').pop();
+		if(imageExtensions.index(fileExt) !== -1){
+			images.push(fileArray[i]);
+		}else if(videoExtensions.index(fileExt) !== -1){
+			videos.push(fileArray[i]);
+		}
+	}
+
+}
+
+
+extensionSort(files);
+
+  </script>
+
+
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

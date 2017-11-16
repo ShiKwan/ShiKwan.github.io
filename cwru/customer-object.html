@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Object Review</title>
+   <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+  <div id="images"></div>
+
+  <div id="title-line">
+    Title: <span id="title" />
+  </div>
+
+  <div id="year-line">
+      Year: <span id="year"/>
+  </div>
+  
+  <script type="text/javascript">
+    var customer = {
+      firstName: "John",
+      lastName: "Smith",
+      age: 25,
+      address: {
+        streetAddress: "21 2nd Street",
+        city: "New York",
+        state: "NY",
+        postalCode: "10021"
+      },
+      phoneNumber: [{
+        type: "home",
+        number: "212 555-1234"
+      }, {
+        type: "fax",
+        number: "646 555-4567"
+      }]
+    };
+
+    // Step 1: Log the First Name below using console.log
+    console.log(customer.firstName);
+    // Step 2: Log the Last Name below using console.log
+    console.log(customer.lastName);
+    // Step 3: Log the State of the Address below using console.log
+    console.log(customer.address.state);
+    // Step 4: Log the Home Phone Number below using console.log
+    console.log(customer.phoneNumber[0].number);
+    // Step 5: Log the Fax Number below using console.log
+    console.log(customer.phoneNumber[1].number);
+
+
+      var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+
+
+      var omdbAPI = "http://www.omdbapi.com/?t=frozen&r=json&apikey=trilogy";
+
+
+      $(function(){
+        var title = 'Space+Jam';
+        var queryUrl = 'http://www.omdbapi.com/?apikey=trilogy&t='+title;
+        console.log("BEGIN AJAX Request" + queryUrl);
+
+        $.ajax({
+          url: queryUrl,
+          method : 'GET'
+        }).done(function(result){
+          console.log("Received a response to. ");
+          console.log(result);
+          console.log(result.Year);
+          $("#title").html(result.Title);
+
+
+
+          $("#year").html(result.Year);
+          console.log('END AJAX REQUEST');
+        }).fail(function(error){
+          console.log("Failed to get a response");
+          console.log(error.responseText);
+        });
+        console.log('Main code has completed ');
+      })
+
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

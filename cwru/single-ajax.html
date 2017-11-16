@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Single AJAX</title>
+</head>
+
+<body>
+  <div class="title-line">Title : <span id="title"></span></div>
+  <div class="year-line">Year : <span id="year"></span></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // constructing a queryURL variable we will use instead of the literal string inside of the ajax method
+    var title = "space+jam";
+    var queryURL = "https://www.omdbapi.com/?t=" + title + "&y=&plot=short&apikey=40e9cece";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).done(function(response) {
+      console.log(response);
+      console.log(response.Runtime);
+      console.log(response.Title);
+    });
+
+$(function(){
+        var title = 'Space+Jam';
+        var queryUrl = 'http://www.omdbapi.com/?apikey=trilogy&t='+title;
+        console.log("BEGIN AJAX Request" + queryUrl);
+
+        $.ajax({
+          url: queryUrl,
+          method : 'GET'
+        }).done(function(result){
+          console.log("Received a response to. ");
+          console.log(result);
+          console.log(result.Year);
+          $("#title").html(result.Title);
+          $("#year").html(result.Year);
+          console.log('END AJAX REQUEST');
+        }).fail(function(error){
+          console.log("Failed to get a response");
+          console.log(error.responseText);
+          $("#title").html("ERROR");
+          $("#year").html("ERROR");
+        });
+        console.log('Main code has completed ');
+      })
+
+
+
+
+// ---------------------------------------------------------
+
+    console.log("This console.log will probably happen first because of asynchronicity.");
+    var x = 2;
+    var y = 10;
+    var z = 13;
+    console.log("We can also assign some variables and do some arithmetic while we wait too: 2 + 10 + 13 = ", x + y + z);
+
+  </script>
+
+</body>
+
+</html>
